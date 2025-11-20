@@ -140,3 +140,36 @@ Set count = a or a - 1
 Print odd numbers using formula: 2 × i − 1
 
 Code
+
+
+
+
+import java.util.Scanner;
+
+
+public class Problem_3 {
+
+
+    public static void main(String[] args) {
+
+    
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("enter the number: ");
+        
+        int num = sc.nextInt();
+
+        int count = (num % 2 == 0) ? (num - 1) : num;
+
+        for (int i = 1; i <= count; i++) {
+        
+            System.out.print(2 * i - 1);
+            
+            if (i < count) {
+            
+                System.out.print(", ");
+            }
+        }
+    }
+}
+
