@@ -70,3 +70,23 @@ public class Problem_1 {
         System.out.println("The result of a and b is : " + result);
     }
 }
+
+
+📘 Problem 2: Odd Number Series
+Description
+
+This program prints the first n odd numbers.
+
+Example
+
+Input: 4
+Output: 1, 3, 5, 7
+
+Logic
+
+The nth odd number is:
+2 × n − 1
+
+Loop from 1 to n and print each odd number
+
+Code
