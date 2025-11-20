@@ -36,12 +36,11 @@ Handle division by zero
 Print result
 
 Code
-import java.util.Scanner;
 
+import java.util.Scanner;
 public class Problem_1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.println("Enter the first value:");
         double a = sc.nextDouble();
         System.out.println("Enter the second value:");
@@ -49,7 +48,6 @@ public class Problem_1 {
         System.out.println("Enter the operations ");
         String op = sc.next();
         double result;
-
         if (op.equals("+")) {
             result = a + b;
         } else if (op.equals("-")) {
@@ -66,7 +64,6 @@ public class Problem_1 {
             System.out.println("Invalid operation");
             return;
         }
-
         System.out.println("The result of a and b is : " + result);
     }
 }
