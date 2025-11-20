@@ -1,4 +1,4 @@
-Java Basic Programs – Venumuni Chimmani
+#Venumuni Chimmani
 
 This repository contains solutions for 4 Java programs focusing on loops, conditions, mathematical operations, and basic logic building.
 
