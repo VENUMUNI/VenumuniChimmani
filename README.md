@@ -210,30 +210,35 @@ Print output in {key: value} format
 
 Code
 
-
-
 public class Problem_4 {
 
     public static void main(String[] args) {
-    
+
+        // Given array
         int[] arr = {1,2,8,9,12,46,76,82,15,20,30};
-        
+
         System.out.print("{");
 
+        // Loop numbers 1 to 9
         for (int i = 1; i <= 9; i++) {
             int count = 0;
 
+            // Count how many elements divisible by i
             for (int num : arr) {
                 if (num % i == 0) {
                     count++;
                 }
             }
 
+            // Print as key:value
             System.out.print(i + ": " + count);
-            if (i < 9) System.out.print(", ");
+
+            // Add comma except for last
+            if (i < 9) {
+                System.out.print(", ");
+            }
         }
 
         System.out.print("}");
     }
 }
-
