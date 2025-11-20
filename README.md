@@ -42,14 +42,18 @@ public class Problem_1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        // Taking user inputs
         System.out.println("Enter the first value:");
         double a = sc.nextDouble();
+
         System.out.println("Enter the second value:");
         double b = sc.nextDouble();
-        System.out.println("Enter the operations ");
+
+        System.out.println("Enter the operation (+, -, *, /):");
         String op = sc.next();
         double result;
 
+        // Performing operations
         if (op.equals("+")) {
             result = a + b;
         } else if (op.equals("-")) {
@@ -57,16 +61,19 @@ public class Problem_1 {
         } else if (op.equals("*")) {
             result = a * b;
         } else if (op.equals("/")) {
+            // Division by zero check
             if (b == 0) {
                 System.out.println("Cannot divide by zero");
                 return;
             }
             result = a / b;
         } else {
+            // Invalid operator case
             System.out.println("Invalid operation");
             return;
         }
 
+        // Printing output
         System.out.println("The result of a and b is : " + result);
     }
 }
