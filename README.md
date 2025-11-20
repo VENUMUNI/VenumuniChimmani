@@ -155,36 +155,35 @@ Print odd numbers using formula: 2 × i − 1
 Code
 
 
-
-
 import java.util.Scanner;
-
 
 public class Problem_3 {
 
-
     public static void main(String[] args) {
-
     
         Scanner sc = new Scanner(System.in);
-        
-        System.out.println("enter the number: ");
+
+        System.out.println("Enter the number:");
         
         int num = sc.nextInt();
 
+        // If number is even → print (num - 1), else print num
         int count = (num % 2 == 0) ? (num - 1) : num;
 
+        // Printing odd numbers
         for (int i = 1; i <= count; i++) {
-        
+
+            // Odd number formula
             System.out.print(2 * i - 1);
-            
+
+            // Comma formatting
             if (i < count) {
-            
                 System.out.print(", ");
             }
         }
     }
 }
+
 
 
 
