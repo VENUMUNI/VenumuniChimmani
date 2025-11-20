@@ -173,3 +173,52 @@ public class Problem_3 {
     }
 }
 
+
+
+📘 Problem 4: Count Multiples (1–9)
+Description
+
+Given the array:
+
+[1, 2, 8, 9, 12, 46, 76, 82, 15, 20, 30]
+
+
+Count how many numbers are divisible by each value from 1 to 9.
+
+Expected Output
+{1: 11, 2: 8, 3: 4, 4: 4, 5: 3, 6: 2, 7: 0, 8: 1, 9: 1}
+
+Logic
+
+Loop from 1 to 9
+
+For each value, count how many array elements are divisible by it
+
+Print output in {key: value} format
+
+Code
+
+
+
+public class Problem_4 {
+    public static void main(String[] args) {
+        int[] arr = {1,2,8,9,12,46,76,82,15,20,30};
+        System.out.print("{");
+
+        for (int i = 1; i <= 9; i++) {
+            int count = 0;
+
+            for (int num : arr) {
+                if (num % i == 0) {
+                    count++;
+                }
+            }
+
+            System.out.print(i + ": " + count);
+            if (i < 9) System.out.print(", ");
+        }
+
+        System.out.print("}");
+    }
+}
+
