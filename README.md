@@ -60,48 +60,64 @@ public class Problem_1 {
     }
 }
 
-# Problem-2: Odd Number Series
-# Description
-Generate odd numbers up to a terms.
-Example:
+Problem 2: Odd Number Series
+Description
+
+Generate the first n odd numbers.
+
+Example
+
 Input: 4
 Output: 1, 3, 5, 7
-Logic
-The nth odd number = 2*n - 1.
-// Print first 'a' odd numbers
 
+Logic
+
+The nth odd number = 2 × n − 1
+
+Loop from 1 to n and print odd numbers
+
+Code
 import java.util.Scanner;
+
 public class Problem_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt(); // number of odd values to print
         System.out.println("Enter the number:");
+        int num = sc.nextInt();
+
         for (int i = 1; i <= num; i++) {
-            // formula for odd number
             System.out.print((2 * i - 1));
             if (i < num) System.out.print(", ");
         }
     }
 }
 
-# Problem-3: Conditional Odd Number Series
-# Description:
-Rules:
-If a is odd → print a odd numbers
-If a is even → print (a - 1) odd numbers
+
+Problem 3: Conditional Odd Number Series
+Description
+
+Print odd numbers based on this rule:
+
+If input a is odd → print a odd numbers
+
+If input a is even → print a − 1 odd numbers
+
 Examples
+
 Input: 3 → 1, 3, 5
 Input: 6 → 1, 3, 5, 7, 9
 
-// Conditional odd number series
+Code
 import java.util.Scanner;
+
 public class Problem_3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the number: ");
         int num = sc.nextInt();
-        // If a is even, print (a-1) odd numbers; if odd print a
+        // number of odd numbers to print, if even num-1 to get odd value
         int count = (num % 2 == 0) ? (num - 1) : num;
+
         for (int i = 1; i <= count; i++) {
             System.out.print(2 * i - 1);
             if (i < count) {
@@ -111,34 +127,39 @@ public class Problem_3 {
     }
 }
 
-# Problem-4: Count Multiples (1–9)
-# Description
-Given a list:
-[1,2,8,9,12,46,76,82,15,20,30]
-Count how many times each number from 1 to 9 divides elements.
+Problem 4: Count Multiples (1–9)
+Description
 
-Expected Output Format:
+Given an array:
+
+[1, 2, 8, 9, 12, 46, 76, 82, 15, 20, 30]
+
+
+Count how many numbers are divisible by each digit from 1 to 9.
+
+Expected Output
 {1: 11, 2: 8, 3: 4, 4: 4, 5: 3, 6: 2, 7: 0, 8: 1, 9: 1}
-// Count multiples of 1 to 9
+
+Code
 
 public class Problem_4 {
     public static void main(String[] args) {
         int[] arr = {1,2,8,9,12,46,76,82,15,20,30};
         System.out.print("{");
-        // Loop from 1 to 9
+
         for (int i = 1; i <= 9; i++) {
             int count = 0;
-            // Count how many numbers are divisible by i
+
             for (int num : arr) {
                 if (num % i == 0) {
                     count++;
                 }
             }
-            // print result as "i: count"
-            System.out.print(i + ": " + count);
 
+            System.out.print(i + ": " + count);
             if (i < 9) System.out.print(", ");
         }
+
         System.out.print("}");
     }
 }
