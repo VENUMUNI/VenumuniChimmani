@@ -95,6 +95,7 @@ Code
 import java.util.Scanner;
 
 public class Problem_2 {
+
     public static void main(String[] args) {
     
         Scanner sc = new Scanner(System.in);
@@ -108,5 +109,6 @@ public class Problem_2 {
             if (i < num) System.out.print(", ");
         }
     }
+    
 }
 
