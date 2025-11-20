@@ -1,30 +1,37 @@
-# VenumuniChimmani
+Problem 1: Calculator using Class
+Description
 
-This repository contains solutions for **4 Java programs** covering basic logic building, loops, conditions, and mathematical operations.
+A simple calculator program that performs the following operations:
 
+Addition
 
+Subtraction
 
-#  **Problem 1: Calculator using Class**
+Multiplication
 
-### **Description**
-A simple calculator that performs:
-- Addition  
-- Subtraction  
-- Multiplication  
-- Division  
+Division
 
-**Inputs**
-- `a` → double  
-- `b` → double  
-- `operation` → string (`+`, `-`, `*`, `/`)
+Inputs
 
-### **Logic**
-- Read `a`, `b`, and operator  
-- Perform operation using if–else conditions  
-- Print result  
+a → double
 
-### **Code**
-```java
+b → double
+
+operation → one of (+, -, *, /)
+
+Logic
+
+Read two numbers and an operator
+
+Use if–else to identify the operation
+
+Perform calculation
+
+Handle division by zero
+
+Print result
+
+Code
 import java.util.Scanner;
 
 public class Problem_1 {
@@ -63,7 +70,7 @@ public class Problem_1 {
 Problem 2: Odd Number Series
 Description
 
-Generate the first n odd numbers.
+This program prints the first n odd numbers.
 
 Example
 
@@ -72,9 +79,10 @@ Output: 1, 3, 5, 7
 
 Logic
 
-The nth odd number = 2 × n − 1
+The formula for the nth odd number is:
+2 × n − 1
 
-Loop from 1 to n and print odd numbers
+Loop from 1 to n and generate odd numbers
 
 Code
 import java.util.Scanner;
@@ -92,20 +100,27 @@ public class Problem_2 {
     }
 }
 
-
 Problem 3: Conditional Odd Number Series
 Description
 
-Print odd numbers based on this rule:
+This program prints odd numbers based on the input number:
 
-If input a is odd → print a odd numbers
+If the number is odd → print that many odd numbers
 
-If input a is even → print a − 1 odd numbers
+If the number is even → print (a − 1) odd numbers
 
 Examples
 
 Input: 3 → 1, 3, 5
 Input: 6 → 1, 3, 5, 7, 9
+
+Logic
+
+Check if number is even or odd
+
+Set count = number (if odd) or number − 1 (if even)
+
+Print odd numbers using formula: 2 × i − 1
 
 Code
 import java.util.Scanner;
@@ -115,7 +130,7 @@ public class Problem_3 {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the number: ");
         int num = sc.nextInt();
-        // number of odd numbers to print, if even num-1 to get odd value
+
         int count = (num % 2 == 0) ? (num - 1) : num;
 
         for (int i = 1; i <= count; i++) {
@@ -130,18 +145,25 @@ public class Problem_3 {
 Problem 4: Count Multiples (1–9)
 Description
 
-Given an array:
+Given the array:
 
 [1, 2, 8, 9, 12, 46, 76, 82, 15, 20, 30]
 
 
-Count how many numbers are divisible by each digit from 1 to 9.
+Count how many elements are divisible by each number from 1 to 9.
 
 Expected Output
 {1: 11, 2: 8, 3: 4, 4: 4, 5: 3, 6: 2, 7: 0, 8: 1, 9: 1}
 
-Code
+Logic
 
+Loop from 1 to 9
+
+For each number, check how many array elements are divisible by it
+
+Print output in dictionary format
+
+Code
 public class Problem_4 {
     public static void main(String[] args) {
         int[] arr = {1,2,8,9,12,46,76,82,15,20,30};
@@ -163,5 +185,3 @@ public class Problem_4 {
         System.out.print("}");
     }
 }
-
-
