@@ -114,3 +114,29 @@ public class Problem_2 {
     
 }
 
+
+
+
+Problem 3: Conditional Odd Number Series
+Description
+
+Print odd numbers based on the following condition:
+
+If a is odd → print a odd numbers
+
+If a is even → print a − 1 odd numbers
+
+Examples
+
+Input: 3 → 1, 3, 5
+Input: 6 → 1, 3, 5, 7, 9
+
+Logic
+
+Use a condition to check even/odd
+
+Set count = a or a - 1
+
+Print odd numbers using formula: 2 × i − 1
+
+Code
